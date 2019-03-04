@@ -18,10 +18,11 @@ import question1.Triangle;
 public class Picture {
     private Square wall;
     private Square window;
+    private Square earth;
     private Triangle roof;
     private Circle sun;
-
-    /**
+    private Circle sun2;
+   /**
      * Constructor for objects of class Picture
      */
     public Picture() {
@@ -31,6 +32,7 @@ public class Picture {
     /**
      * Draw this picture.
      */
+    
     public void draw() {
         wall = new Square();
         wall.moveVertical(80);
@@ -50,13 +52,37 @@ public class Picture {
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        earth = new Square();
+        earth.changeColor("green");
+        earth.moveHorizontal(-70);
+        earth.moveVertical(170);
+        earth.changeSize(500);
+        earth.makeVisible();
+        
+        sun2 = new Circle();
+        sun2.changeColor("yellow");
+        sun2.moveHorizontal(80);
+        sun2.moveVertical(-30);
+        sun2.changeSize(30);
+        sun2.makeVisible();
     }
-
+   
+    public void sunset() {
+       if (wall != null && earth !=null) { 
+           // only if it's painted already...
+        
+    sun.slowMoveVertical(112);}
+        
+    }
+    
+    
+    
     /**
      * Change this picture to black/white display
      */
@@ -83,4 +109,10 @@ public class Picture {
         }
     }
 
+    public static void main (String[] args){
+    Picture p = new Picture();
+    p.draw();
+    //p.setBlackAndWhite();
+    p.setColor();
+    }
 }

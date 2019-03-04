@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 import java.util.*;
-
+import java.awt.geom.*;
 /**
  * Canvas is a class to allow for simple graphical drawing on a canvas. This is
  * a modification of the general purpose Canvas, specially made for the BlueJ
@@ -43,7 +43,6 @@ public class Canvas {
     private Image canvasImage;
     private List<Object> objects;
     private HashMap<Object, ShapeDescription> shapes;
-
     /**
      * Create a Canvas.
      * 
@@ -56,6 +55,7 @@ public class Canvas {
      * @param bgClour
      *            the desired background colour of the canvas
      */
+
     private Canvas(String title, int width, int height, Color bgColour) {
         frame = new JFrame();
         canvas = new CanvasPane();
@@ -66,6 +66,7 @@ public class Canvas {
         frame.pack();
         objects = new ArrayList<Object>();
         shapes = new HashMap<Object, ShapeDescription>();
+
     }
 
     /**
@@ -185,7 +186,7 @@ public class Canvas {
      */
     private class CanvasPane extends JPanel {
         public void paint(Graphics g) {
-            g.drawImage(canvasImage, 0, 0, null);
+            g.drawImage(canvasImage, 100, 100, null);
         }
     }
 
@@ -208,5 +209,4 @@ public class Canvas {
             graphic.fill(shape);
         }
     }
-
 }

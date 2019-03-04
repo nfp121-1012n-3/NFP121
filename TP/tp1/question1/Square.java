@@ -9,7 +9,7 @@ import java.awt.*;
  * @version 1.0 (15 July 2000)
  */
 
-public class Square {
+public class Square  {
     private int size;
     private int xPosition;
     private int yPosition;

@@ -60,16 +60,16 @@
 
 ### Question 1 :
 
-    Votre réponse...
+    screenshot attachee en classroom 
 
 ### Question 2
 
-    Votre réponse...
+    screenshot attachee en classroom + code en github
 
 
 ### Question 3 :
     
-    Votre réponse...
+    screenshot attachee en classroom + code en github
 
 
 ### Conclusion, biliographie et remarques :

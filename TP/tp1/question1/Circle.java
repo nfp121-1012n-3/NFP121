@@ -158,6 +158,7 @@ public class Circle {
         }
     }
 
+    
     /*
      * Erase the circle on screen.
      */
@@ -167,4 +168,5 @@ public class Circle {
             canvas.erase(this);
         }
     }
+
 }
