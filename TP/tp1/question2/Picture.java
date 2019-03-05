@@ -22,6 +22,7 @@ public class Picture {
     private Triangle roof;
     private Circle sun;
     private Circle sun2;
+    private boolean laTerreEstFixe;
    /**
      * Constructor for objects of class Picture
      */
@@ -73,13 +74,30 @@ public class Picture {
         sun2.makeVisible();
     }
    
-    public void sunset() {
-       if (wall != null && earth !=null) { 
-           // only if it's painted already...
-        
-    sun.slowMoveVertical(112);}
-        
+    /**
+     * la terre est fixe => le soleil se couche.
+     */
+    
+    public void setLaTerreEstFixe(){
+        if(!laTerreEstFixe){
+            laTerreEstFixe = true;
+            sun.slowMoveVertical(300);
+            sun2.slowMoveVertical(300);
+        }
     }
+    
+    /**
+     * la terre n'est pas fixe => le soleil se leve.
+     */
+    
+    public void setLaTerreNEstPasFixe(){
+        if(laTerreEstFixe){
+            laTerreEstFixe = false;
+            sun.slowMoveVertical(-300);
+            sun2.slowMoveVertical(-300);
+        }
+
+}
     
     
     

@@ -123,13 +123,13 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
             auditeur1.login());
     }
 
-    public void test_point_interrogation()
-    {
-                question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("Chlo?",
-                "chlo?", "12345");
-        assertEquals("Mme Chlo? chlo? ", "Chlo?", auditeur1.nom());
-        assertEquals("Mme Chlo? chlo? ", "chlo?", auditeur1.prenom());
-        assertEquals(" point d'interrogation (? devient _) ? ", "chlo__c",
+    public void test_arcolade()
+   {
+        question3.AuditeurCNAM auditeur1 = new question3.AuditeurCNAM("Chlo]",
+                "chlo]", "12345");
+        assertEquals("Mme Chlo] chlo] ", "Chlo]", auditeur1.nom());
+        assertEquals("Mme Chlo] chlo] ", "chlo]", auditeur1.prenom());
+        assertEquals(" arcolade (] devient _) ? ", "chlo__c",
             auditeur1.login());
     }
     
