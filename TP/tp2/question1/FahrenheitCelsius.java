@@ -51,7 +51,7 @@ public class FahrenheitCelsius {
             
 	    
           
-	    float c1= (((float)5)/((float)9));
+	    float c1= (float)5/9;
 	  
 	    float conv = c1 *  (entree - 32);
  

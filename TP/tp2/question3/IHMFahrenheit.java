@@ -42,7 +42,7 @@ public class IHMFahrenheit extends JFrame implements ActionListener{
      
         int fahrenheit = Integer.parseInt(fah);
        
-	    float c1= (((float)5)/((float)9));
+	    float c1= (float)5/9;
 	  
 	    float conv = c1 *  (fahrenheit - 32);
  
