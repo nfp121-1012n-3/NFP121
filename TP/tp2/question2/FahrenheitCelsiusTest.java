@@ -1,5 +1,5 @@
 package question2;
-
+import java.io.*;
 
 /**
  * Classe-test FahrenheitCelsiusTest.
@@ -33,6 +33,9 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
     // Notez cependant que ce dernier ne peut saisir les objets primitifs
     // du présentoir (les objets sans constructeur, comme int, float, etc.).
 
+    
+   
+   
     /**
      * Constructeur de la classe-test FahrenheitCelsiusTest
      */
@@ -66,7 +69,22 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
      * Ces méthodes doivent vérifier les résultats attendus à l'aide d'assertions
      * assertTrue(<boolean>).
      * Par convention, leurs noms devraient débuter par "test".
-     * Vous pouvez ébaucher le corps grâce au menu contextuel "Enregistrer une méthode de test".
+     * Vous pouvez ébaucher le corps grâce au menu contextuel
+     * "Enregistrer une méthode de test".
      */
+    //nouvelles :    V   
+   
+      
 
+	  public void test_f2cDeepNegatifNumber(){
+	      assertEquals("    -985932667 °F -> -214748368.0 °C ? ", -214748368.0,
+	      question2.FahrenheitCelsius.fahrenheitEnCelsius(-985932667), 0.1);}
+	
+
+        
+        
+        
 }
+
+
+

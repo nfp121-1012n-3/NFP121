@@ -4,7 +4,9 @@ import question1.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import java.text.*;
+import java.util.Scanner;
+import java.math.*;
 public class IHMFahrenheit extends JFrame implements ActionListener{
   private JTextField entree = new JTextField( 6 );
   /** Le bouton de conversion. */
@@ -21,7 +23,7 @@ public class IHMFahrenheit extends JFrame implements ActionListener{
     getContentPane().setBackground( Color.pink );
     setLocation(100,100);
     pack();setVisible(true);
-    
+    sortie.setEditable(false);
     boutonDeConversion.addActionListener( this );
   }
 
@@ -32,14 +34,34 @@ public class IHMFahrenheit extends JFrame implements ActionListener{
    */
   public void actionPerformed( ActionEvent ae ){
     try{
-      int fahrenheit = 0; // valeur est une String et doit être convertie en entier, voir java.lang.Integer méthode parseInt (--> try/catch)
-      float celsius = 0F; // à compléter, en appelant la méthode ad'hoc de la question2 
-      // un test ici pour le zéro absolu (-273.1)
-
-      sortie.setText( Float.toString( celsius));
+      
+        double result;
+      
+      
+        String fah = entree.getText(); // valeur est une String et doit être convertie en entier, voir java.lang.Integer méthode parseInt (--> try/catch)
+     
+        int fahrenheit = Integer.parseInt(fah);
+       
+	    float c1= (((float)5)/((float)9));
+	  
+	    float conv = c1 *  (fahrenheit - 32);
+ 
+            float res = ((int)(conv * 10))/10.0f;
+        
+            if(res < -273.1f) res = -273.1f;
+            
+            result = (double)res;
+           
+	
+      sortie.setText( String.format("%.1f", result));
+   
     }catch(NumberFormatException nfe){
-      sortie.setText("error ! ");
+      
+        sortie.setText("error ! ");
+   
+    
     }
+    
   }
   
   

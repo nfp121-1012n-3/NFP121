@@ -77,27 +77,23 @@ public class Picture {
     /**
      * la terre est fixe => le soleil se couche.
      */
-    
-    public void setLaTerreEstFixe(){
-        if(!laTerreEstFixe){
-            laTerreEstFixe = true;
-            sun.slowMoveVertical(300);
-            sun2.slowMoveVertical(300);
-        }
+    public void TerreFixeSunset(){
+        laTerreEstFixe=true;
+    sun.slowMoveVertical(230);
     }
     
-    /**
-     * la terre n'est pas fixe => le soleil se leve.
-     */
+    public void TerreNonFixeSunset(){laTerreEstFixe=false;
+    sun.slowMoveVertical(-85);
+    }
     
-    public void setLaTerreNEstPasFixe(){
-        if(laTerreEstFixe){
-            laTerreEstFixe = false;
-            sun.slowMoveVertical(-300);
-            sun2.slowMoveVertical(-300);
-        }
+    
+//public void sunset(){
 
-}
+ //   if(laTerreEstFixe=true){
+//sun.slowMoveVertical(230);
+//
+  //  }else{sun.slowMoveVertical(-10);}
+//}
     
     
     
